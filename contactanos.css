@@ -1,0 +1,200 @@
+.contactanos{
+  padding: 60px 30px;
+  min-height:500px;
+  background:
+  linear-gradient(rgba(253,251,246,.94), rgba(253,251,246,.94)),
+  url("img/fondo-home.png") center/cover no-repeat;
+}
+
+.tarjeta-redes{
+  position:relative;
+  max-width:980px;
+  margin:auto;
+  background:
+  linear-gradient(rgba(247,238,226,.30),rgba(247,238,226,.30)),
+  url("img/textura-lino.webp");
+  background-size:250px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius:30px;
+  padding:55px;
+  display:grid;
+  grid-template-columns:1fr 3px 1fr;
+  gap:45px;
+  box-shadow:0 18px 40px rgba(0,0,0,.12),
+             0 2px 8px rgba(0,0,0,.05);
+  border: 1px solid rgba(31,74,67,.08);
+  animation:subir .8s ease;
+}
+
+@keyframes subir{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.tarjeta-redes::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:5px;
+  background:linear-gradient(
+        90deg,
+        #D7A62A,
+        #EACB74,
+        #D7A62A
+    );
+  border-radius:30px 30px 0 0;
+}
+
+.izquierda,
+.derecha{
+  display:flex;
+  flex-direction:column;
+}
+
+/*-----BLOQUES DE CONTACTO-----*/
+
+.bloque-contacto{
+  margin-bottom:15px;
+}
+
+.bloque-contacto h3{
+  letter-spacing:.4px;
+  color:#1F4A43;
+  margin-bottom:15px;
+  font-size:1.5rem;
+}
+
+.bloque-contacto h3::after{
+  content:"";
+  display:block;
+  width:55px;
+  height:3px;
+  margin-top:10px;
+  background:#D7A62A;
+  border-radius:20px;
+}
+
+.bloque-contacto a{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  text-decoration:none;
+  color:#3F3F3F;
+}
+
+.bloque-contacto span{
+  font-size: 0.9rem;
+  font-weight:300;
+}
+
+.icono{
+  width:45px;
+  height:45px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  background:#F7EFE4;
+  transition:.35s;
+}
+
+.icono img{
+  width:22px;
+  height:22px;
+  object-fit: contain;
+  transform: scale(1.5);
+}
+
+.bloque-contacto a:hover .icono{
+  background:#1F4A43;
+  transform:scale(1.08);
+}
+
+.bloque-contacto a:hover img{
+  filter:brightness(0) invert(1);
+}
+
+.numeros{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/*------DIVISOR / MAPA / MENSAJE------*/
+
+.divisor-contacto{
+  background:linear-gradient(
+        transparent,
+        #D7A62A,
+        #D7A62A,
+        transparent
+  );
+  border-radius:30px;
+  width:3px;
+  margin:20px 0;
+}
+
+.mapa{
+  margin-top:5px;
+  border-radius:25px;
+  border:5px solid white;
+  overflow:hidden;
+  display:block;
+  transition:.3s;
+  box-shadow:0 18px 35px rgba(0,0,0,.12);
+}
+
+.mapa img{
+  width:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.mapa:hover{
+  transform:scale(1.02);
+}
+
+.mensaje{
+  margin-top:12px;
+  font-size:.9rem;
+  text-align:center;
+  color:#555;
+  font-style:italic;
+  line-height:1.6;
+}
+
+/*-------RESPONSIVE-------*/
+@media (max-width:900px){
+    .contactanos{
+        padding: 90px 25px;
+    }
+    .tarjeta-redes{
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 45px 30px;
+    }
+}
+
+@media (max-width:600px){
+    .bloque-contacto a{
+        padding: 15px 18px;
+        gap: 14px;
+    }
+    .icono{
+        width: 40px;
+        height: 40px;
+    }
+    .icono img{
+        width: 20px;
+        height: 20px;
+    }
+}
