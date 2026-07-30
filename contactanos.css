@@ -60,6 +60,27 @@
   flex-direction:column;
 }
 
+.titulo-contactanos{
+  grid-column: 1 / -1; /* ocupa todas las columnas */
+  text-align: center;
+}
+
+.titulo-contactanos h3{
+  font-size: 2rem;
+  color: #1F4A43;
+  font-style: italic
+}
+
+.titulo-contactanos h3::after{
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 5px auto 0;
+  background: #D7A62A;
+  border-radius: 20px;
+}
+
 /*-----BLOQUES DE CONTACTO-----*/
 
 .bloque-contacto{

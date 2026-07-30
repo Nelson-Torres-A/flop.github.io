@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="conocenos.css">
     <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" hret="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header>
@@ -27,50 +27,50 @@
         <section id="origen-equipo" class="origen-equipo">
             <div class="contenido-origen">
                 <div class="encabezado-origen">
-                    <h2>Cómo nació este equipo</h2>
+                    <h2>Nuestro equipo</h2>
                     <div class="divisor" style="justify-content:center;">❤ </div>
                 </div>
                 <p>Somos un grupo de personas unidas por una misma convicción: que toda mujer merece la oportunidad de aprender un oficio, generar ingresos propios y liderar su vida. Empezamos este camino hace poco, pero con la certeza de que cada paso, por pequeño que sea, ya está transformando historias.</p>
             </div>
             <div id="equipo" class="equipo">
-                <div class="encabezado-equipo">
-                    <h2>Nuestro equipo</h2>
-                    <div class="divisor" style="justify-content:center;">❤ </div>
-                    <p class="bajada-equipo">Un equipo pequeño, con grandes ganas de crecer junto a las mujeres que acompañamos.</p>
-                </div>
-
                 <div class="equipo-grid">
+
                     <div class="card-persona">
                         <div class="foto-persona">
-                            <img src="img/equipo/persona1.jpg" alt="Nombre Apellido">
+                            <img src="img/foto1.jpeg" alt="Gisell Montaña">
                         </div>
-                        <h3>Nombre Apellido</h3>
+                        <h3>Gisell Montaña</h3>
+                        <span class="cargo-persona">Directora de comunicaciones y marketing</span>
+                        <p>Directora de comunicaciones y marketing, enfocada en fortalecer la presencia digital y el impacto social de la fundación.</p>
+                            <a href="#" onclick="abrirModal('gisell'); return false" class="conocer-mas">
+                            Conocer más →
+                            </a>                    
+                    </div>
+                    <div class="card-persona">
+                        <div class="foto-persona">
+                            <img src="img/foto2.jpeg" alt="Milena Cristancho">
+                        </div>
+                        <h3>Milena Cristancho</h3>
                         <span class="cargo-persona">Fundadora / Directora</span>
+                        <p>Abogada especialista en Derecho Administrativo y Familia, líder social comprometida con el desarrollo de las mujeres.</p>
+                            <a href="#" onclick="abrirModal('milena'); return false" class="conocer-mas">
+                            Conocer más →
+                            </a>
                     </div>
-
                     <div class="card-persona">
                         <div class="foto-persona">
-                            <img src="img/equipo/persona2.jpg" alt="Nombre Apellido">
-                        </div>
-                        <h3>Nombre Apellido</h3>
-                        <span class="cargo-persona">Coordinación de talleres</span>
-                    </div>
-
-                    <div class="card-persona">
-                        <div class="foto-persona">
-                            <img src="img/equipo/persona3.jpg" alt="Nombre Apellido">
+                            <img src="img/persona3.jpg" alt="Diego Torres">
                         </div>
                         <h3>Diego Torres</h3>
                         <span class="cargo-persona">Abogado JurÍdico</span>
-                        <p></p>
+                        <p>Abogado especialista en Derecho Penal y SST, comprometido con la defensa de derechos y la asesoría jurídica integral.</p>
+                        <a href="#" onclick="abrirModal('diego'); return false"; class="conocer-mas">
+                            Conocer más →
+                        </a> 
                     </div>
                 </div>
             </div>
         </section>
-            
-     
-
-        <!-- Equipo -->
 
         <!-- Llamado a sumarse -->
         <section id="unete-equipo" class="unete-equipo">
@@ -116,5 +116,27 @@
             </div>
         </div>
     </footer>
+
+<div id="modal" class="modal">
+
+    <div class="contenido-modal">
+
+        <span class="cerrar" onclick="cerrarModal()">
+            &times;
+        </span>
+
+        <img  id="modal-img" src="img/directora.jpg" alt="">
+
+        <h2 id="modal-nombre"></h2>
+
+        <h4 id="modal-cargo"></h4>
+
+        <p id="modal-texto">
+        </p>
+
+    </div>
+
+</div>
+<script src="script.js"></script>
 </body>
 </html>
